@@ -91,3 +91,4 @@
 	- Navigate to http://localhost:3100/search
 	- Leave search box empty and submit the search
 	- Assert that "Please provide a search word." message is shown.
+# Home Test Project
