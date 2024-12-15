@@ -11,17 +11,19 @@ Before you begin, ensure you have the following installed on your system:
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
+1. Clone the repository and navigate to the project directory:
+   ```
    git clone https://github.com/NicoSalva/home-test.git
    cd home-test
+   ```
 
 2. Install the dependencies:
 ```
 npm install
 ```
 3. Pull and run the Docker image for the web application:
-```docker pull automaticbytes/demo-app
+```
+docker pull automaticbytes/demo-app
 docker run -p 3100:3100 automaticbytes/demo-app
 ```
 
