@@ -13,11 +13,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NicoSalva/home-test/issues"
-  },
-  "homepage": "https://github.com/NicoSalva/home-test#readme",
   "devDependencies": {
-    "@playwright/test": "^1.49.1"
+    "@playwright/test": "^1.49.1",
+    "allure-playwright": "^3.0.7"
   }
 }

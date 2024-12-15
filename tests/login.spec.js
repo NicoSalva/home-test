@@ -6,7 +6,6 @@ test.describe('Login Tests', () => {
         const loginPage = new LoginPage(page);
 
         await loginPage.navigate();
-
         await loginPage.login('johndoe19', 'supersecret');
 
         const welcomeMessage = await loginPage.getWelcomeMessage();
@@ -17,7 +16,6 @@ test.describe('Login Tests', () => {
         const loginPage = new LoginPage(page);
       
         await loginPage.navigate();
-      
         await loginPage.login('wronguser', 'wrongpassword');
       
         const errorMessage = await loginPage.returnLoginMessage('Wrong credentials');
@@ -28,13 +26,10 @@ test.describe('Login Tests', () => {
         const loginPage = new LoginPage(page);
       
         await loginPage.navigate();
-      
         await loginPage.login('', '');
       
         const errorMessage = await loginPage.returnLoginMessage('Fields can not be empty');
         expect(errorMessage).toBe('FIELDS CAN NOT BE EMPTY');
       });
-
-    
 });
 

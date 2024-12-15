@@ -16,7 +16,7 @@ test.describe('Checkout Form', () => {
   });
 
   // Test para "Checkout Form Order Success"
-  test('TEST04 - Checkout Form Order Success', async ({ page }) => {
+  test('TEST04 - Checkout Form Order Success', async () => {
     await checkoutPage.completeForm({
       name: 'John Doe',
       email: 'johndoe@example.com',
@@ -43,7 +43,7 @@ test.describe('Checkout Form', () => {
   });
 
   // Test para "Checkout Form Alert"
-  test.only('TEST05 - Checkout Form Alert', async ({ page }) => {
+  test('TEST05 - Checkout Form Alert', async ({ page }) => {
     await checkoutPage.completeForm({
       name: 'John Doe',
       email: 'johndoe@example.com',
@@ -61,7 +61,6 @@ test.describe('Checkout Form', () => {
     // Verificar el estado inicial del checkbox y desmarcar si está marcado
     if (await page.isChecked(checkoutPage.billingCheckbox)) {
       await page.uncheck(checkoutPage.billingCheckbox);
-      console.log('Checkbox unchecked.');
     }
 
     // Capturar alerta con window.alert
@@ -80,4 +79,15 @@ test.describe('Checkout Form', () => {
     // Validar el mensaje de la alerta
     expect(alertMessage).toContain('Shipping address same as billing checkbox must be selected.');
   });
+
+  test('TEST06 - Cart Total Test', async () => {
+    await checkoutPage.navigate();
+    const productCount = await checkoutPage.getProductCount();
+    const productPrices = await checkoutPage.getProductPricesFromText(productCount);
+    const totalPrice = await checkoutPage.getTotalPrice();
+    const calculatedTotal = productPrices.reduce((sum, price) => sum + price, 0);
+
+    expect(calculatedTotal).toBe(totalPrice);
+  });
+
 });

@@ -10,11 +10,8 @@ logs/
 # Playwright specific
 playwright-report/
 test-results/
-
-# Environment variables
-.env
-.env.local
-.env.*.local
+allure-results/
+allure-report/
 
 # IDEs and editors
 .vscode/
@@ -28,7 +25,3 @@ Thumbs.db
 # Mac system files
 .AppleDouble
 .LSOverride
-
-# Coverage reports
-coverage/
-*.lcov
