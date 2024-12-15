@@ -5,7 +5,7 @@ export default defineConfig({
   timeout: 30000, 
   use: {
     browserName: 'chromium', 
-    headless: true, 
+    headless: false, 
     baseURL: 'http://localhost:3100', 
     screenshot: 'only-on-failure', 
     video: 'retain-on-failure', 
