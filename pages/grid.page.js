@@ -2,14 +2,13 @@ class GridPage {
   constructor(page) {
     this.page = page;
 
-    // Locators for grid elements
     this.gridContainer = '#menu.grid-container'; // Main grid container
     this.gridItems = `${this.gridContainer} .item`; // Individual items in the grid
-    this.itemTitle = '[data-test-id="item-name"]'; // Title of a grid item
-    this.itemPrice = '#item-price'; // Price of a grid item
-    this.itemImage = 'img'; // Image within a grid item
+    this.itemTitle = '[data-test-id="item-name"]'; 
+    this.itemPrice = '#item-price'; 
+    this.itemImage = 'img'; 
     this.itemButton = '[data-test-id="add-to-order"]'; // Add-to-order button
-    this.itemNumber = 'label[data-test-id="card-number"]'; // Number identifier for the grid item
+    this.itemNumber = 'label[data-test-id="card-number"]'; 
   }
 
   async navigate() {

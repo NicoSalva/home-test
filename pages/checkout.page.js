@@ -2,7 +2,6 @@ class CheckoutPage {
     constructor(page) {
       this.page = page;
   
-      // Locators for checkout form inputs
       this.fullNameInput = '#fname';
       this.emailInput = '#email';
       this.addressInput = '#adr';
@@ -14,12 +13,10 @@ class CheckoutPage {
       this.expMonthInput = '#expmonth';
       this.expYearInput = '#expyear';
       this.cvvInput = '#cvv';
-  
-      // Locators for other elements in the checkout page
       this.billingCheckbox = '[name="sameadr"]'; // Checkbox for "Shipping address same as billing"
-      this.submitButton = this.page.getByText('Continue to checkout', { exact: true }); // Submit button
-      this.orderConfirmation = '#order-confirmation'; // Confirmation message container
-      this.orderNumber = '[data-id="ordernumber"]'; // Generated order number
+      this.submitButton = this.page.getByText('Continue to checkout', { exact: true }); 
+      this.orderConfirmation = '#order-confirmation';
+      this.orderNumber = '[data-id="ordernumber"]'; 
       this.totalPrice = 'p:has-text("Total") b'; // Total price element
       this.cartHeading = this.page.getByRole('heading', { name: 'Cart ' }); // Heading showing cart details
       this.productSelector = (productName) => this.page.getByText(productName); // Dynamic product selector
