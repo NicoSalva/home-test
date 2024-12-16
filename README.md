@@ -38,7 +38,8 @@ npm test
 
 ## Run a Specific Test File
 
-```npx playwright test tests/<test-file>.spec.js
+```
+npx playwright test tests/<test-file>.spec.js
 ```
 
 Example:
