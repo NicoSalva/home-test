@@ -21,13 +21,17 @@ Before you begin, ensure you have the following installed on your system:
 ```
 npm install
 ```
-3. Pull and run the Docker image for the web application:
+3. Install Playwright browsers:
+```
+npx playwright install
+```
+4. Pull and run the Docker image for the web application:
 ```
 docker pull automaticbytes/demo-app
 docker run -p 3100:3100 automaticbytes/demo-app
 ```
 
-4. Verify the application is running: Open http://localhost:3100 in your browser.
+5. Verify the application is running: Open http://localhost:3100 in your browser.
 
 ## Running the Tests
 
